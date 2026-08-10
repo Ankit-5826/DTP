@@ -4,9 +4,9 @@ Dockerized full-stack application.
 
 ## Tech Stack
 
-- React.js
-- Node.js
-- Express.js
-- MongoDB Atlas
-- Docker
-- Docker Compose
+-- React.js
+-- Node.js
+-- Express.js
+-- MongoDB Atlas
+-- Docker
+-- Docker Compose
