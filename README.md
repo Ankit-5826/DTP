@@ -6,6 +6,7 @@
 
 ## Tech Stack
 
+<<<<<<< HEAD
 ## Project Structure
 
 ## Prerequisites
@@ -158,3 +159,14 @@ When the backend is running locally:
 cd BasicNodeSet-up-Part3-main
 npm install
 npm run dev
+=======
+-- React.js
+-- Node.js
+-- Express.js
+-- MongoDB Atlas
+-- Docker
+-- Docker Compose
+
+
+this is login 5
+>>>>>>> c8f47d52656ecd3c1cba9d915b517068ca99c005
