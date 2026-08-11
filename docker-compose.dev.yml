@@ -1,0 +1,42 @@
+services:
+  backend:
+   build:
+    context: ./BasicNodeSet-up-Part3-main
+    dockerfile: Dockerfile.dev
+
+   env_file:
+     - ./BasicNodeSet-up-Part3-main/.env
+
+   ports:
+    - "8080:8080"
+
+   volumes:
+    - ./BasicNodeSet-up-Part3-main:/app
+    - /app/node_modules
+
+   networks:
+    - dtp-network
+
+  frontend:
+    build:
+      context: ./YourAIChat-main
+      dockerfile: Dockerfile.dev
+
+    ports:
+      - "5173:5173"
+
+    volumes:
+      - ./YourAIChat-main:/app
+      - /app/node_modules
+
+    environment:
+      - VITE_API_URL=http://localhost:8080
+
+    networks:
+      - dtp-network
+
+    depends_on:
+      - backend
+
+networks:
+  dtp-network:

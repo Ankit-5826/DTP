@@ -22,7 +22,7 @@ export default function RightBody({
   const test1 = async () => {
     try {
       console.log("----------",`${import.meta.env.VITE_API_URL}/api/v1/healthCheck/`)
-
+      
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/healthCheck/`);
       if (!response.ok) {
         throw new Error("Failed to fetch data");
@@ -42,7 +42,7 @@ export default function RightBody({
     <>
       <h1 onClick={() => {
         test1();
-      }}>Hello..............</h1>
+      }}>Backend <br/>Check...</h1>
       <div className="rightBodyMain" ref={rightBodyRef}>
         <MainTopHeader onToggle={onToggle} />
         <MainchatArea
